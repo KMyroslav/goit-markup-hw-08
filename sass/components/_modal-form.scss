@@ -1,12 +1,16 @@
 .modal__title {
   display: block;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(20px, 400, 30px);
   text-align: center;
 
   margin-bottom: 12px;
 
-  color: var(--secondary-black-text);
+  color: $secondary-black-text;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .modal__form {
@@ -33,7 +37,7 @@
   padding: 12px 0 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color var(--primary-transition-style);
+  transition: border-color $primary-transition-style;
 }
 
 .modal__form-icon {
@@ -42,13 +46,13 @@
   left: 0;
   transform: translateY(-50%);
   margin-left: 12px;
-  transition: fill var(--primary-transition-style);
+  transition: fill $primary-transition-style;
 }
 
-// .modal__form-input:focus,
+.modal__form-input:focus,
 .modal__form-input:focus + .modal__form-icon {
-  fill: var(--accent);
-  border-color: var(--accent);
+  fill: $accent;
+  border-color: $accent;
   outline: none;
 }
 
@@ -63,24 +67,28 @@
 
   outline: none;
 
-  transition: border-color var(--primary-transition-style);
+  transition: border-color $primary-transition-style;
 
   &:focus {
-    border-color: var(--accent);
+    border-color: $accent;
   }
 
   &::placeholder {
-    line-height: 1.14;
+    @include font(14px, 400, 16px);
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
+
+    @media screen and (min-width: 1200px) {
+      @include font(12px, 400, 16px);
+    }
   }
 }
 
 .modal__term-label {
   display: flex;
   align-items: center;
-  line-height: 1.71;
+  @include font(12px, 400, 14px);
   margin: 20px 0 30px 0;
   cursor: pointer;
 
@@ -93,13 +101,20 @@
     border: 2px solid #000000;
     border-radius: 2px;
 
-    transition: background-color var(--primary-transition-style);
+    transition: background-color $primary-transition-style;
+  }
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.71;
   }
 }
 
 .modal__term-checkbox:checked + .modal__term-label::before {
   border: none;
-  background-color: var(--accent);
+  background-color: $accent;
   background-image: url(../img/icons/icon-check.svg);
   background-size: contain;
 }
@@ -108,7 +123,7 @@
   align-self: center;
   display: inline-block;
 
-  background-color: var(--accent);
+  background-color: $accent;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -121,12 +136,12 @@
 
   cursor: pointer;
 
-  color: var(--secondary-white-text);
+  color: $secondary-white-text;
 
-  transition: background-color var(--primary-transition-style);
+  transition: background-color $primary-transition-style;
 
   &:hover,
   &:focus {
-    background-color: var(--button-accent-blue-bg);
+    background-color: $button-accent-blue-bg;
   }
 }

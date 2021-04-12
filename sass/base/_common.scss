@@ -27,9 +27,9 @@ ul {
 }
 
 body {
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
-  color: var(--primary-grey-text);
+  color: $primary-grey-text;
 }

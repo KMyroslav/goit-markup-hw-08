@@ -1,5 +1,7 @@
 .hero {
-  padding: 200px 0;
+  padding: 118px 0;
+
+  text-align: center;
 
   background-color: var(--accent-dark-blue-bg);
   text-align: center;
@@ -13,18 +15,33 @@
     url('../img/main/bg/hero-bg.jpg');
   background-position: center;
   background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .box {
+      background-image: url('photo@2x.png');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
   margin-bottom: 30px;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  @include font(26px, 900, 42px);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--secondary-white-text);
+
+  color: $secondary-white-text;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .modal-button {
@@ -37,14 +54,65 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: var(--secondary-white-text);
-  background-color: var(--accent);
+  color: $secondary-white-text;
+  background-color: $accent;
 
-  transition: background-color var(--primary-transition-style);
+  transition: background-color $primary-transition-style;
 
   &:hover,
   &:focus {
-    background-color: var(--button-accent-blue-bg);
+    background-color: $button-accent-blue-bg;
     cursor: pointer;
   }
 }
+
+// .hero {
+//   padding: 200px 0;
+
+//   background-color: var(--accent-dark-blue-bg);
+//   text-align: center;
+//   margin: 0 auto;
+//   max-width: 1600px;
+//   background-color: var(--hero-grey-bg);
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url('../img/main/bg/hero-bg.jpg');
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// .hero__title {
+//   margin-bottom: 30px;
+
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.36;
+//   text-align: center;
+//   letter-spacing: 0.06em;
+//   text-transform: uppercase;
+//   color: var(--secondary-white-text);
+// }
+
+// .modal-button {
+//   min-width: 200px;
+//   padding: 10px 32px;
+
+//   border: solid 1px transparent;
+//   border-radius: 4px;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1.87;
+//   letter-spacing: 0.06em;
+//   color: var(--secondary-white-text);
+//   background-color: var(--accent);
+
+//   transition: background-color var(--primary-transition-style);
+
+//   &:hover,
+//   &:focus {
+//     background-color: var(--button-accent-blue-bg);
+//     cursor: pointer;
+//   }
+// }

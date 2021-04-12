@@ -1,16 +1,33 @@
+// .logo {
+//   font-family: var(--secondart-font);
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.19;
+//   text-decoration: none;
+//   color: var(--secondary-black-text);
+// }
+
+// .logo__accent {
+//   color: var(--accent);
+// }
+
+// .logo_theme-dark {
+//   color: var(--secondary-white-text);
+// }
+
 .logo {
-  font-family: var(--secondart-font);
+  font-family: $secondart-font;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   text-decoration: none;
-  color: var(--secondary-black-text);
+  color: $secondary-black-text;
 }
 
 .logo__accent {
-  color: var(--accent);
+  color: $accent;
 }
 
 .logo_theme-dark {
-  color: var(--secondary-white-text);
+  color: $secondary-white-text;
 }

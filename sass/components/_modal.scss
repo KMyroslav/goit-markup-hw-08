@@ -3,16 +3,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform var(--primary-transition-style);
+  transition: transform $primary-transition-style;
 
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 450px;
 
-  background-color: var(--primary-white-bg);
+  background-color: $primary-white-bg;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__exit-button {
@@ -31,13 +39,13 @@
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: var(--button-white-bg);
+  background-color: $button-white-bg;
 
-  transition: color var(--primary-transition-style);
+  transition: color $primary-transition-style;
 
   &:focus,
   &:hover {
-    color: var(--accent);
+    color: $accent;
   }
 }
 
