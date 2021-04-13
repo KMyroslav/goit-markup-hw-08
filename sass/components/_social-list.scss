@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 206px;
+  margin: 0 auto;
 }
 
 .social-list__link {
@@ -12,13 +14,13 @@
   height: 44px;
   border-radius: 50%;
 
-  color: var(--icon-primary-grey);
-  transition: background-color var(--primary-transition-style),
-    color var(--primary-transition-style);
+  color: $icon-primary-grey;
+  transition: background-color $primary-transition-style,
+    color $primary-transition-style;
 
   &:hover,
   &:focus {
-    background-color: var(--accent);
+    background-color: $accent;
     color: #ffffff;
   }
 }

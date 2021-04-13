@@ -1,11 +1,35 @@
-.filter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+.projects {
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  &:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
 }
 
 .filter__button {
@@ -16,40 +40,58 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  color: var(--secondary-black-text);
+  color: $secondary-black-text;
   background-color: #f5f4fa;
 
-  transition: background-color var(--primary-transition-style),
-    color var(--primary-transition-style),
-    box-shadow var(--primary-transition-style);
+  transition: background-color $primary-transition-style,
+    color $primary-transition-style, box-shadow $primary-transition-style;
 
   &:hover,
   &:focus {
-    color: var(--secondary-white-text);
-    background-color: var(--button-accent-blue-bg);
+    color: $secondary-white-text;
+    background-color: $button-accent-blue-bg;
     cursor: pointer;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
 
-.projects {
-  padding: 94px 0;
+.project-list__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .project-list {
+//   // display: flex;
+//   // flex-wrap: wrap;
+// }
+
+// .project-list__item {
+//   // margin: 0px 30px 30px 0px;
+
+//   &:nth-child(3n + 3) {
+//     // margin-right: 0;
+//   }
+
+//   &:nth-last-child(-n + 3) {
+//     // margin-bottom: 0;
+//   }
+// }
 
 .project-list__link {
   display: block;
-  transition: box-shadow var(--primary-transition-style);
+  transition: box-shadow $primary-transition-style;
+
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+}
+
+.project-image {
+  width: 100%;
 }
 
 .project-list__overlay {
@@ -70,11 +112,11 @@
 
   font-size: 18px;
   line-height: 1.56;
-  color: var(--secondary-white-text);
+  color: $secondary-white-text;
 
   transform: translateY(105%);
 
-  transition: transform var(--primary-transition-style);
+  transition: transform $primary-transition-style;
 
   .project-list__link:hover &,
   .project-list__link:focus & {
@@ -82,20 +124,8 @@
   }
 }
 
-.project-list__item {
-  margin: 0px 30px 30px 0px;
-
-  &:nth-child(3n + 3) {
-    margin-right: 0;
-  }
-
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
-}
-
 .project-list__description-wrapper {
-  border: 1px solid var(--portfolio-description-border);
+  border: 1px solid $portfolio-description-border;
   border-top: none;
   padding: 20px 24px;
 }
@@ -107,11 +137,157 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--secondary-black-text);
+  color: $secondary-black-text;
 }
 
 .project-list__type {
   font-size: 16px;
   line-height: 1.87;
-  color: var(--primary-grey-text);
+  color: $primary-grey-text;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+
+    &:nth-last-child(even) {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+  }
+}
+
+// .filter {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 50px;
+// }
+
+// .filter__item:not(:last-child) {
+//   margin-right: 8px;
+// }
+
+// .filter__button {
+//   border: solid 1px transparent;
+//   border-radius: 4px;
+//   padding: 6px 22px;
+
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 1.62;
+//   color: $secondary-black-text;
+//   background-color: #f5f4fa;
+
+//   transition: background-color $primary-transition-style,
+//     color $primary-transition-style, box-shadow $primary-transition-style;
+
+//   &:hover,
+//   &:focus {
+//     color: $secondary-white-text;
+//     background-color: $button-accent-blue-bg;
+//     cursor: pointer;
+//     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+//       0px 2px 2px rgba(0, 0, 0, 0.12);
+//   }
+// }
+
+// .projects {
+//   padding: 94px 0;
+// }
+
+// .project-list {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .project-list__link {
+//   display: block;
+//   transition: box-shadow $primary-transition-style;
+//   &:hover,
+//   &:focus {
+//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//       1px 4px 6px rgba(0, 0, 0, 0.16);
+//   }
+// }
+
+// .project-list__overlay {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .project-list__overlay-text {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   height: 100%;
+//   padding: 64px 24px 0px 24px;
+
+//   overflow: auto;
+
+//   background-color: rgba(33, 150, 243, 0.9);
+
+//   font-size: 18px;
+//   line-height: 1.56;
+//   color: $secondary-white-text;
+
+//   transform: translateY(105%);
+
+//   transition: transform $primary-transition-style;
+
+//   .project-list__link:hover &,
+//   .project-list__link:focus & {
+//     transform: translateY(0%);
+//   }
+// }
+
+// .project-list__item {
+//   margin: 0px 30px 30px 0px;
+
+//   &:nth-child(3n + 3) {
+//     margin-right: 0;
+//   }
+
+//   &:nth-last-child(-n + 3) {
+//     margin-bottom: 0;
+//   }
+// }
+
+// .project-list__description-wrapper {
+//   border: 1px solid $portfolio-description-border;
+//   border-top: none;
+//   padding: 20px 24px;
+// }
+
+// .project-list__title {
+//   margin-bottom: 4px;
+
+//   font-weight: 700;
+//   font-size: 18px;
+//   line-height: 2;
+//   letter-spacing: 0.06em;
+//   color: $secondary-black-text;
+// }
+
+// .project-list__type {
+//   font-size: 16px;
+//   line-height: 1.87;
+//   color: $primary-grey-text;
+// }

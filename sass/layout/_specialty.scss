@@ -1,4 +1,12 @@
 .specialty {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.specialty {
   padding-bottom: 94px;
 }
 
@@ -14,6 +22,7 @@
 .specialty__item {
   position: relative;
   width: calc((100% - 30px * 2) / 3);
+
   &:not(:last-child) {
     margin-right: 30px;
   }
@@ -41,5 +50,5 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--secondary-white-text);
+  color: $secondary-white-text;
 }
