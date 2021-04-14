@@ -583,7 +583,7 @@ body {
   fill: currentColor;
 }
 
-.burger__nav-item:not(:last-child) {
+.burger__nav-item {
   margin-bottom: 32px;
 }
 
