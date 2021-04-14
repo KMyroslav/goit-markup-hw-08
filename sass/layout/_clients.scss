@@ -124,15 +124,18 @@
   fill: currentColor;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 374px) {
   .clients__list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
   .clients__item {
     margin: 0;
-    margin-top: 30px;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
   }
   .clients__link {
     width: 226px;

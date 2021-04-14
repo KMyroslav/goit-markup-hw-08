@@ -75,6 +75,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1195,7 +1196,7 @@ body {
   fill: currentColor;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 374px) {
   .clients__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1207,9 +1208,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0;
   }
   .clients__item {
     margin: 0;
+  }
+  .clients__item:not(:first-child) {
     margin-top: 30px;
   }
   .clients__link {
