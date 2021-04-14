@@ -1573,7 +1573,7 @@ body {
 .project-list__description-wrapper {
   border: 1px solid #eeeeee;
   border-top: none;
-  padding: 20px 24px;
+  padding: 20px 0 20px 24px;
 }
 
 .project-list__title {
