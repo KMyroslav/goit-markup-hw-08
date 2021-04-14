@@ -16,19 +16,20 @@
 
 .specialty__list {
   display: flex;
-  flex-basis: calc(100% / 3);
+  margin: -15px;
 }
 
 .specialty__item {
   position: relative;
   width: calc((100% - 30px * 2) / 3);
-
+  // margin: 15px;
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
 .specialty__image {
+  position: contain;
   vertical-align: bottom;
 }
 
