@@ -57,6 +57,7 @@
 }
 
 .project-list__item {
+  display: flex;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -80,7 +81,8 @@
 // }
 
 .project-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow $primary-transition-style;
 
   &:hover,
@@ -125,6 +127,7 @@
 }
 
 .project-list__description-wrapper {
+  flex-grow: 1;
   border: 1px solid $portfolio-description-border;
   border-top: none;
   padding: 20px 0 20px 24px;

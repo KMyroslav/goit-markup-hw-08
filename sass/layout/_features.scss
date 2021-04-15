@@ -55,12 +55,15 @@
 .feature__title {
   margin-bottom: 10px;
 
-  text-align: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: $secondary-black-text;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .feature__description {

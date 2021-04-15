@@ -13,6 +13,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  @media screen and (max-height: 600px) {
+    top: 60%;
+  }
+
   @media screen and (max-width: 480px) {
     width: 90%;
   }
