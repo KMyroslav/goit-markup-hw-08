@@ -2,7 +2,7 @@
   display: block;
   @include font(20px, 400, 30px);
   text-align: center;
-
+  font-weight: 700;
   margin-bottom: 12px;
 
   color: $secondary-black-text;
